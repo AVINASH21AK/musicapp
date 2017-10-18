@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.smartpocket.musicwidget.activities.ActOfflineSong" />
+
+        <!--android:visibility="gone"-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/appwidget_dark_bg">
+
+            <LinearLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <ImageView
+                    android:id="@+id/imageViewHeadphones"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_launcher" />
+
+                <LinearLayout
+                    android:id="@+id/layoutTextViews"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textViewTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Titulo"
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewArtist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Artista"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textViewDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:text="Duracion"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/button_shuffle"
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/appwidget_button_left"
+                    android:src="@drawable/shuffle_off" />
+
+                <ImageView
+                    android:id="@+id/button_prev"
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/appwidget_button_center"
+                    android:src="@drawable/ic_skip_previous_white_36dp" />
+
+                <ImageView
+                    android:id="@+id/button_play_pause"
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/appwidget_button_center"
+                    android:src="@drawable/ic_play_arrow_white_36dp" />
+
+                <ImageView
+                    android:id="@+id/button_next"
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/appwidget_button_center"
+                    android:src="@drawable/ic_skip_next_white_36dp" />
+
+                <ImageView
+                    android:id="@+id/ivStopMusic"
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/appwidget_button_right"
+                    android:src="@drawable/ic_stop_white_36dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
